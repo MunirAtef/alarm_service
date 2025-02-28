@@ -17,7 +17,7 @@ app.get('/ping', async (req, res) => {
     setTimeout(async () => {
         console.log('Forwarding request from Main to Secondary');
         await axios.get(SECONDARY_SERVER).catch(err => console.error('Error:', err.message));
-    }, 30000);
+    }, 180000);
 });
 
 app.listen(PORT, () => console.log(`Main Server running on port ${PORT}`));
